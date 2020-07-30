@@ -1,5 +1,17 @@
 <h2>Products</h2>
 
+  <ul class="nav nav-tabs">
+    <li role="presentation"><a [routerLink]="['./main']">Main</a></li>
+    <li role="presentation"><a [routerLink]="['./more-info']">More Info</a></li>
+  </ul>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  Enter id: <input #id size="6" />
+  <button (click)="goToProduct(id.value)">Go</button>  
+  </div>
+</div>
+
 <div class="products-area">
   <router-outlet></router-outlet>
 </div>
