@@ -12,7 +12,5 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  goToProduct(id: string): void{
-    this.router.navigate(['./', id], {relativeTo: this.route});
-  }
+
 }
