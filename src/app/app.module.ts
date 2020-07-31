@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LoggedInGuard } from './logged-in.guard';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +32,8 @@ import { ProtectedComponent } from './protected/protected.component';
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: LocationStrategy, useClass: HashLocationStrategy },
-    AUTH_PROVIDERS
+    AUTH_PROVIDERS,
+    LoggedInGuard
   ],
   bootstrap: [AppComponent]
 })
